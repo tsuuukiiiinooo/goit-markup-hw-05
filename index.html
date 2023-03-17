@@ -49,7 +49,7 @@
             <section class="section-main ">
                 <div class="main-headline-container container">
                     <h1 class="main-headline">Effective Solutions for Your Business</h1>
-                    <button class="modal-btn" type="button">Order Service</button>
+                    <button class="modal-btn" type="button" data-modal-open>Order Service</button>
                 </div>    
             </section>
             <section class="section-about-us">
@@ -359,11 +359,12 @@
                 </div>
             </div>
         </footer>
-        <div class="backdrop">
+        <div class="backdrop is-hidden" data-modal>
             <div class="modal">
-                <button type="button" class="close-btn">
-                    <svg>
-                        <use href="./images#icon-close"></use>
+                <button type="button" class="modal-close" data-modal-close>
+                    <!-- Close -->
+                    <svg class="close-btn">
+                        <use class="close-btn" href="./images#icon-close-black"></use>
                     </svg>
                 </button>
             </div>
