@@ -66,9 +66,6 @@ img {
 
 .main-header {
     display: block;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
 }
 
 .page-header-container {
@@ -89,7 +86,6 @@ img {
 
 
 .main-header {
-    padding: 24px 0;
     background-color: var(--white);
     border-bottom: 1px solid #E7E9FC;
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 
@@ -115,6 +111,7 @@ img {
 }
 
 .menu-link {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -122,6 +119,9 @@ img {
     color: var(--navy-blue-color);
     position: relative;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:active,
@@ -133,16 +133,38 @@ img {
     color: var(--ocean);
 }
 
+.menu-link-static {
+    color: var(--ocean);
+}
+
+.menu-link-static::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--ocean);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -1px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .menu-link:focus::after,
 .menu-link:hover::after {
     content: '';
     display: block;
     width: 100%;
     height: 4px;
-    background-color: currentColor;
+    background-color: var(--ocean);
     border-radius: 2px;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link {
@@ -152,6 +174,9 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--slate);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-list-contacts {
@@ -168,8 +193,8 @@ h3 {
 
 .section-main {
     background: var(--navy-blue-color);
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding-top: 187px;
+    padding-bottom: 187px;
     background-image: linear-gradient( rgba(46, 47, 66, 0.7),  
     rgba(46, 47, 66, 0.7) ), 
     url(../images/people-office.jpg);
@@ -221,6 +246,9 @@ h3 {
     margin-top: 48px;
     border:1px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn {
@@ -397,6 +425,9 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* FOOTER */
@@ -466,6 +497,9 @@ h3 {
     padding-right: 24px;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn-list:hover,
@@ -501,6 +535,9 @@ h3 {
 
 .link-projects {
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .img-and-text-portfolio {
@@ -586,6 +623,10 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .social-link:hover,
@@ -604,10 +645,13 @@ h3 {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--iris);
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;  
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .social-icon-footer {
@@ -638,7 +682,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 2;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -656,32 +699,30 @@ h3 {
     max-height: 576px;
     background-color: var(--dairy);
     overflow: auto;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px;
     
 }
-
 
 .backdrop.is-hidden .modal {
     transform: scale(0);
 }
 
-.modal-close {
-    position: absolute;
-    top: 24px;
-    right: 24px;
+.close-btn{
+    display: block;
     width: 24px;
     height: 24px;
-    background-color: var(--cloud);
-    border-color: var(--cornflower);
+    background: var(--cornflower);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    left: 20px;
+    top: 20px;
+    margin-left: auto;
 }
 
-.close-btn{
+.icon-close {
     width: 8px;
     height: 8px;
-    display: block;
     fill: var(--navy-blue-color);
-    opacity: 1;
 }
